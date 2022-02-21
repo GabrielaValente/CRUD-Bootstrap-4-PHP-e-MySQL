@@ -13,34 +13,29 @@
         #tamanhoContainer {
             width: 500px;
         }
-
         #botao {
-            background-color:; /* cor de fundo*/
-            color: #ffffff; /* cor da letra */
-            
+            background-color: info; /* cor de fundo*/
+            color: #ffffff; /* cor da letra */  
         }
 
-
         </style>
-
 </head>
 <body>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px">
         <h4>Formulário de Cadastro </h4>
-        <form style="margin-top: 20px">
+        <form action="_inserir_produto.php" method="post" style="margin-top: 20px">
             <div class="form-group">
                 <label for="number" class="form-label">Nº do produto</label>
-                <input type="number" class="form-control" placeholder="Insira o número do produto">
+                <input type="number" class="form-control" name="numeroproduto" placeholder="Insira o número do produto" autocomplete="off" required>
             </div>
-
             <div class="form-group">
                 <label for="number" class="form-label">Nome do produto</label>
-                <input type="text" class="form-control" placeholder="Insira o nome do produto">
+                <input type="text" class="form-control" name="nomeproduto" placeholder="Insira o nome do produto" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control">
+                <select class="form-control" name="categoria" autocomplete="off" required>
                     <option>Periféricos</option>
                     <option>Hardware</option>
                     <option>Software</option>
@@ -50,12 +45,12 @@
 
             <div class="form-group">
                 <label for="number" class="form-label">Quantidade do produto</label>
-                <input type="number" class="form-control" placeholder="Insira a quantidade do produto">
+                <input type="number" class="form-control" name="quantidade" placeholder="Insira a quantidade do produto" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control">
+                <select class="form-control" name="fornecedor" required>
                     <option>Fornecedor A</option>
                     <option>Fornecedor B</option>
                     <option>Fornecedor C </option>
