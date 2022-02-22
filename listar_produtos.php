@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Produtos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf6602108e.js" crossorigin="anonymous"></script> <!-- Kit de fonts e icons gratuitos !-->
 </head>
 
 <body>
@@ -22,6 +23,7 @@
                     <th scope="col">Categoria</th>
                     <th scope="col">Quantidade</th>
                     <th scope="col">Fornecedor</th>
+                    <th scope="col">Ação</th>
                 </tr>
 
             </thead>
@@ -42,7 +44,6 @@
                 $categoria = $array['categoria'];
                 $quantidade = $array['quantidade'];
                 $fornecedor = $array['fornecedor'];
-
             ?>
 
                 <tr>
@@ -53,6 +54,8 @@
                     <td><?php echo $categoria ?></td>
                     <td><?php echo $quantidade ?></td>
                     <td><?php echo $fornecedor ?></td>
+                    <td><a class="btn btn-warning btn-sm" style="color:#fff" href="editar_produto.php?id=<?= $id_equipamento?>" role="button">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i>Editar</a></td>
                 <?php
             } ?>
                 </tr>
