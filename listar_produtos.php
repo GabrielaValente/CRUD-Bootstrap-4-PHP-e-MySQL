@@ -23,13 +23,39 @@
                     <th scope="col">Quantidade</th>
                     <th scope="col">Fornecedor</th>
                 </tr>
-            
+
             </thead>
-            <tbody>
+            <?php
+            include 'conexao.php';
+            $sql = "SELECT * FROM `equipamentos`";
+            $busca = mysqli_query($conexao, $sql);
+
+            // Laço de repetição para listar os registros do banco
+            // Enquanto houver produtos para serem listados, liste os produtos.
+            // Mesma variável utilizada no banco de dados.
+
+            while ($array = mysqli_fetch_array($busca)) {
+
+                $id_equipamento = $array['id_equipamento'];
+                $numeroproduto = $array['numeroproduto'];
+                $nomeproduto = $array['nomeproduto'];
+                $categoria = $array['categoria'];
+                $quantidade = $array['quantidade'];
+                $fornecedor = $array['fornecedor'];
+
+            ?>
+
                 <tr>
-                    <td></td>
+                    <!-- Esta tag <td> é preenchida pelo código PHP!-->
+                    <!-- Trazendo cada um dos dados que forem cadastrados diretamente pelas variáveis !-->
+                    <td><?php echo $numeroproduto ?></td>
+                    <td><?php echo $nomeproduto ?></td>
+                    <td><?php echo $categoria ?></td>
+                    <td><?php echo $quantidade ?></td>
+                    <td><?php echo $fornecedor ?></td>
+                <?php
+            } ?>
                 </tr>
-            </tbody>
         </table>
 
     </div>
