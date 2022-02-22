@@ -24,5 +24,4 @@ $inserir = mysqli_query($conexao, $sql);
     <div class="text-center" style="padding-top: 20px">
         <a href="index.php" role="button" class="btn btn-sm btn-primary">Cadastrar novo equipamento</a>
     </div>
-
 </div> 

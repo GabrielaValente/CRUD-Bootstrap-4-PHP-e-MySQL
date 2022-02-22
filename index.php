@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <style type="text/css">
-
         #tamanhoContainer {
             width: 500px;
         }
-        #botao {
-            background-color: info; /* cor de fundo*/
-            color: #ffffff; /* cor da letra */  
-        }
 
-        </style>
+        #botao {
+            background-color: info;
+            /* cor de fundo*/
+            color: #ffffff;
+            /* cor da letra */
+        }
+    </style>
 </head>
+
 <body>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px">
         <h4>Formulário de Cadastro </h4>
@@ -57,8 +59,8 @@
                 </select>
             </div>
 
-            <div style="text-align: right";>
-            <button type="submit" id="botao" class= "btn btn-info btn-sm">Cadastrar</button>
+            <div style="text-align: right" ;>
+                <button type="submit" id="botao" class="btn btn-info btn-sm">Cadastrar</button>
             </div>
         </form>
     </div>
